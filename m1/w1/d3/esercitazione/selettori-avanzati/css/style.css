@@ -1,0 +1,42 @@
+blockquote + p {/*il primo tag p dopo ogni blockquote(adiacente)*/
+    color: red;
+}
+
+span ~ b{/* tutti i b che seguono uno span */
+    color: blue;
+}
+
+button{
+    background-color:red;
+    transition: background-color 1s;
+}
+
+button:hover{/*quando passo con il mouse sopra ad un button*/
+    background-color:yellow;
+    border: none;
+}
+
+ul li:not(.escluso) {/*tutti i li di opgni ul tranne quello con classe escluso*/
+    text-decoration: overline;
+}
+
+ul li:last-child{/*ultimo li di ogni ul*/
+    color: purple;
+}
+
+ul li:nth-of-type(3){/*terzo elementi li di ogni ul*/
+    background-color: red;
+}
+
+table tr:nth-of-type(odd){/*elementi tr dispari di ogni tabella*/
+    background-color: #ccc
+}
+
+/* pseudoelementi */
+
+table tr td::before{/*elemento che viene inserito prima del contenuto*/
+    content: "@"
+}
+table tr td::after{/*elemento che viene inserito dopo il contenuto*/
+    content: "@"/*content è obbligatorio(anche con virgolette vuote va bene)*/
+}
