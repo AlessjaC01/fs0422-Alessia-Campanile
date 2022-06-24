@@ -14,7 +14,7 @@ img{
     border-right: 15px solid rgba(0,0,0,0.5);
     border-top-left-radius: 100%;
     border-bottom-right-radius: 50%;
-    outline: 5px solid rgba(0,0,0,0.5)
+    outline: 5px solid rgba(159, 18, 18, 0.5)
 }
 
 .quadrato:nth-of-type(2){
@@ -33,7 +33,7 @@ img{
 #blocco-sfondo{
     height: 300px;
     background-image: url('../img/html5-piccola-guida.jpg');
-    background-size: cover;
+    background-size:inherit;
     background-repeat: no-repeat;
     background-position: top center;
     background-attachment: fixed;

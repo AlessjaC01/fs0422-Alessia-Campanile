@@ -3,7 +3,7 @@
 header {
     font-family: 'Raleway', sans-serif;
     background-color: rgb(43, 176, 216);
-    text-align: center;
+    box-sizing: border-box;
     border-bottom: 10px solid rgb(30, 148, 184);
     font-size: 2rem;    
     line-height: 3rem;
