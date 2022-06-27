@@ -1,0 +1,66 @@
+@media screen and (min-width: 768px){
+    body {
+        padding:60px;
+        font-size: 1.9rem; 
+    }
+    .social {
+        right: 10px;
+    }
+    .toTop {
+        right: 10px;
+    }
+    table {
+        margin-bottom: 2em;
+        margin-right: 20em;
+        margin-left: 20em;
+    }
+}
+
+@media print {
+    body {
+        background-image:none;
+        font-size: 2.2rem;
+    }
+
+    header {
+        display:none;
+    }
+
+    main {
+        box-shadow:none;
+    }
+
+    table {
+        margin-bottom: 2em;
+        margin-left: 0em
+    }
+
+    thead tr {
+        background-color:none;
+        color:black;
+    }
+
+    iframe {
+        display:none;
+    }
+
+    section {
+        display:none;
+    }
+
+    aside {
+        display:none;
+    }
+
+   footer {
+        display:none;
+   }
+
+   .toTop {
+    display:none;
+   }
+
+   .social {
+    display:none;
+   }
+}
