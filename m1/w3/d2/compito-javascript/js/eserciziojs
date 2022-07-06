@@ -1,0 +1,29 @@
+let numeroDieci = 10
+console.log(`il -> ${ numeroDieci} come valore, non verrà più utilizzato nella var`)
+var numeroDodici = 10
+console.log( "non posso riutilizzare identificatore b con valore -> " + numeroDieci + " perchè mi da: Uncaught TypeError: Assignment to constant variable ma posso mettere lo stesso valore che ho messo in numeroDodici")
+const numeroCento = 100
+console.log( `A differenza di let e var non posso ne mettere lo stesso identificatore ne lo stesso valore in -> posso riutilizzare identificatore b con valore in -> ${ numeroDieci}` )
+
+var x = 10;
+var y = 2;
+
+x += y;
+console.log(x);
+x -= y;
+console.log(x);
+x*=y;
+console.log(x);
+
+var paragrafo = document.querySelector("#personaggio")
+let condizione1 = "Sì";
+let condizione2 = "No";
+
+function personaggio () {if(condizione1){
+    condizione1 = prompt("Mi piace Nezuko")
+    document.write('Sì,eccome')
+}else if (condizione2){
+    document.write('Invece mi piace')
+}
+console.log()
+}
