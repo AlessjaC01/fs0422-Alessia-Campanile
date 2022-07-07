@@ -1,0 +1,13 @@
+input {
+    border: 0;
+    border-bottom: 1px solid blue 
+}
+label {
+    height: 20px;
+    width: 180px;
+    border-bottom: 3px solid blue;
+}
+div:not(:nth-of-type(3)) {
+    display: inline-block;
+    height: 20px;
+}
