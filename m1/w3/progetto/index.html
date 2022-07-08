@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La mia Calcolatrice in Javascript</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="calcolatrice">
+        <div class="display-calculator">
+            <input id="display" placeholder="0" type="text">
+        </div>
+        <div class="input-calculator">
+            <button data-simbolo="7" onclick="aggiungiNumero(this)">7</button>
+            <button data-simbolo="8" onclick="aggiungiNumero(this)">8</button>
+            <button data-simbolo="9" onclick="aggiungiNumero(this)">9</button>
+            <button data-simbolo="+" onclick="aggiungiNumero(this)">+</button>
+            <button data-simbolo="4" onclick="aggiungiNumero(this)">4</button>
+            <button data-simbolo="5" onclick="aggiungiNumero(this)">5</button>
+            <button data-simbolo="6" onclick="aggiungiNumero(this)">6</button>
+            <button data-simbolo="-" onclick="aggiungiNumero(this)">-</button>
+            <button data-simbolo="1" onclick="aggiungiNumero(this)">1</button>
+            <button data-simbolo="2" onclick="aggiungiNumero(this)">2</button>
+            <button data-simbolo="3" onclick="aggiungiNumero(this)">3</button>
+            <button data-simbolo="*" onclick="aggiungiNumero(this)">x</button>
+            <button data-simbolo="C" onclick="cancella(this)">C</button>
+            <button data-simbolo="0" onclick="aggiungiNumero(this)">0</button>
+            <button data-simbolo="." onclick="aggiungiNumero(this)">.</button>
+            <button data-simbolo="/" onclick="aggiungiNumero(this)">/</button>
+            <button data-simbolo="=" onclick="calcola(this)">=</button>
+        </div>
+    </div>
+</body>
+<script src="./js/script.js"></script>
+</html>
