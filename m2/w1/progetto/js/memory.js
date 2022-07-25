@@ -4,8 +4,8 @@ let arrayAnimali = ['🐱', '🦉', '🐾', '🦁', '🦋', '🐛', '🐝', '�
 let arrayComparison = [];
 document.body.onload = startGame();
 let interval;
-let find = document.getElementById('find');
-let modal = document.getElementById('modal');
+let find = document.getElementsByClassName('find');
+let modal = document.getElementById('#modal');
 let timer = document.querySelector('.timer');
 // mi serviranno alcune variabili 1. interval 2. una agganciata alla classe find 
 // 3. una agganciata al'id modal 4. una agganciata alla classe timer
@@ -38,13 +38,9 @@ function gameActive() {
 // chiama la funzione timer e associa a tutti gli elementi (div) di classe icon l'evento click e le due funzioni definit sotto
 function startGame(){
     let arrayShuffle = shuffle(arrayAnimali);
-   
     arrayComparison = [];
     let griglia = document.getElementById('griglia');
-
-    while (griglia.hasChildNodes()){
-        griglia.innerHTML="";
-    }
+    griglia.innerHTML= '';
 
     for(let i=0;i<24;i++){
         let box = document.createElement('div');
@@ -52,16 +48,11 @@ function startGame(){
         icons.classList.add("icon");
         icons.innerHTML=arrayShuffle[i];
         icons.addEventListener("click", displayIcon);
-        griglia.appendChild(box).appendChild(icons);
-        
+        icons.addEventListener("click", trueAll);
+        griglia.appendChild(box);
+        box.appendChild(icons);   
     }
-} 
-let icon = document.querySelector(".icon")
-    for (let i = 0; i < icon.length; i++){
-    icon[i].addEventListener("click", displayIcon);
-    icon[i].addEventListener("click", modaleOn);
-clearInterval(interval);
-startTimer();
+startTime();
 }
 
 
@@ -116,33 +107,29 @@ function displayIcon() {
 
 //una funzione che viene mostrata alla fine quando sono tutte le risposte esatte
 function trueAll(){
-    let risposte = [];
-    if (risposte.length==24){
-        modal.classList.add("active")
-        document.getElementById("risposteEsatte").innerHTML = timer.innerHTML
+    if (find.length==24){
+        clearInterval(interval);
+        modal.classList.add("active");
+        document.getElementById("tempoTrascorso").innerHTML = timer.innerHTML;
     }
 }
 // una funzione che nasconde la modale alla fine e riavvia il gioco
 function offModal (){
-    modal.classList.toggle("active");
-    startGame()
+    modal.classList.remove("active");
+    startGame();
 }
 // una funzione che calcola il tempo e aggiorna il contenitore sotto
 function startTime(){
-    let minute = 0;
-    let hour = 0;
-    let second = 0;
-    interval = setInterval(function(){
-        timer.innerHTML = "Tempo" + minute + 'min' + second + 'sec';
-        second++
-        if(second == 60){
-            minute++; 
-            second = 0;
-        }
-        if (minute == 60){
-            hour++;
-            minute = 0;
-        }
-    },1000)
 
+    let time = new Date();
+
+    time.setHours(0)
+    time.setMinutes(0)
+    time.setSeconds(0)
+
+    interval = setInterval(function (){
+        timer.innerHTML = 'Tempo: ' + time.getMinutes() + ' min ' + time.getSeconds() + ' sec'
+    }, 1000)
+
+    startGame();
 }
