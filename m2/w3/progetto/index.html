@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compito JSON</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Utenti</h1>
+    <div id="users"></div>
+
+    <script>
+        let target = document.querySelector('#users')
+        let box = document.createElement('div')
+        let contenuto = document.createElement('div')
+        contenuto.classList.add("info")
+        box.append(contenuto)
+        target.append(box)
+        fetch('users.json')
+            .then(res => res.json())
+            .then(users => {
+                for (let account of users) {
+                    let div = document.createElement('div')
+                    div.classList.add("utente")
+                    let image = document.createElement('img')
+                    image.src = account.profileURL
+                    let name = document.createElement('p')
+                    name.innerHTML = ("Nome:" + " " + account.firstName)
+                    let surname = document.createElement('p')
+                    surname.innerHTML = ("Cognome:" + " " + account.lastName)
+                    let nickname = document.createElement('p')
+                    nickname.innerHTML = ("Nickname:" + " " + account.username)
+                    let gender = document.createElement('p')
+                    gender.innerHTML = ("Sesso:" + " " + account.gender)
+                    let email = document.createElement('p')
+                    email.innerHTML = ("Email:" + " " + account.email)
+                    div.append(image, nickname, name, surname, gender, email)
+                    contenuto.append(div)
+                }
+            })
+    </script>
+</body>
+</html>
