@@ -1,0 +1,14 @@
+.navbar {
+  background-color: white;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+}
+.ul {
+  text-align: center;
+}
+.nav-link {
+  margin: 0 1rem;
+  color: black;
+  text-decoration: none
+}
