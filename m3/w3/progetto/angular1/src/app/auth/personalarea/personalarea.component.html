@@ -1,0 +1,27 @@
+<form class="row g-4 needs-validation" novalidate>
+  <div class="col-md-5 position-relative">
+    <label for="validationTooltip01" class="form-label">Creatore</label>
+    <input type="user" [(ngModel)]="postData.user" name="user" class="form-control" id="validationTooltip01" required>
+    <div class="invalid-tooltip">
+      Please provide a valid content.
+    </div>
+  </div>
+  <div class="col-md-4 position-relative">
+    <label for="validationTooltip02" class="form-label">Titolo</label>
+    <input type="title" [(ngModel)]="postData.title" name= "title" class="form-control" id="validationTooltip02" required>
+    <div class="invalid-tooltip">
+      Please provide a valid content.
+    </div>
+  </div>
+  <div class="col-md-7 position-relative">
+    <label for="validationTooltip03" class="form-label">Contenuto</label>
+    <input type="content" [(ngModel)]="postData.content"name= "content" class="form-control" id="validationTooltip03" required>
+    <div class="invalid-tooltip">
+      Please provide a valid content.
+    </div>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
+</form>
+

@@ -1,0 +1,23 @@
+<h3>Registrati</h3>
+<form>
+  <div class="row mb-3">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Username</label>
+    <div class="col-sm-3">
+      <input type="username" [(ngModel)]="registerData.username" name="username" placeholder="username" class="form-control" id="inputUsername3">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-3">
+      <input type="email" [(ngModel)]="registerData.email" name="email" placeholder="email" class="form-control" id="inputEmail3">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-3">
+      <input type="password" [(ngModel)]="registerData.password" name="password" placeholder="password" class="form-control" id="inputPassword3">
+    </div>
+  </div>
+  <a (click)="save()" [routerLink]="['/personalarea']" type="submit" class="btn btn-primary mt-5">Conferma</a>
+</form>
+<a [routerLink]="['/']" class="btn btn-warning mt-5">Sei gia registrato?</a>
